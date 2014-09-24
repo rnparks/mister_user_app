@@ -2,7 +2,7 @@
 
 # MisterMasterUserMeister: an exploration of the User
 
-> This exercise will force you to work in new branches for each feature. 
+> This exercise will force you to work in new branches for each feature.
 One a feature is complete merge it back into master by
  - committing your changes
  - checking out master
@@ -74,7 +74,7 @@ In your `User` model create predicate methods for:
 Create a new migration to update the `users` table that
 - removes the `password` column and adds a `password_digest` column
 
-Implement a secure password using the 
+Implement a secure password using the
 [sequel_secure_password gem](http://mlen.pl/sequel_secure_password/)
 
 ## git checkout -b user_signup
@@ -98,11 +98,11 @@ Create a "Login" link on '/' that goes to '/session/new'
 - email
 - password
 
-post to '/session'  if the user is properly authenticated, store their id 
+post to '/session'  if the user is properly authenticated, store their id
 in session and redirect to their show page.
 
 ## git checkout -b user_login_failure
 
-If a user enters the wrong password information redirect them back to the 
-login page and use rack-flash to display a message that they entered the 
+If a user enters the wrong password information redirect them back to the
+login page and use rack-flash to display a message that they entered the
 wrong information.
