@@ -19,7 +19,7 @@ def random_user
     location: location,
     password: password
   }
-  return user user_hash
+  return user_hash
 end
 
 
