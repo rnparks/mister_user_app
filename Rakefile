@@ -88,4 +88,16 @@ namespace :db do
     Rake::Task['environment'].invoke(env)
     require './db/seeds'
   end
+
+  desc "seeds random users in the users table"
+  task :seed_random_users, [:env] do |cmd, args|
+    env = args[:env] || ENV["RACK_ENV"] || "development"
+    Rake::Task['environment'].invoke(env)
+    require './db/seeds_random_users'
+  end
+
+
+
+
+
 end
