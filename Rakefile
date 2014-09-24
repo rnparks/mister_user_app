@@ -96,8 +96,4 @@ namespace :db do
     require './db/seeds_random_users'
   end
 
-
-
-
-
 end
