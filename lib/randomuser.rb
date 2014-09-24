@@ -2,7 +2,7 @@ module RandomUser
   def self.fetch
     response = HTTParty.get("http://api.randomuser.me/")
     email = response["results"][0]["user"]["email"]
-    name  = response["results"][0]["user"]["name"]["first"] + " " + response["results"][0]["user"]["name"]["last"]
+    name  = response["results"][0]["user"]["name"]["title"] + " " +response["results"][0]["user"]["name"]["first"] + " " + response["results"][0]["user"]["name"]["last"]
     gender = response["results"][0]["user"]["gender"]
     picture = response["results"][0]["user"]["picture"]["thumbnail"]
     dob = response["results"][0]["user"]["dob"]
